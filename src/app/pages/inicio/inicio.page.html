@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content >
+   
+    <ion-list>
+    @for (c of componentes; track c.redirectTo){
+      <ion-item [routerLink]="c.redirectTo" detail>
+        <ion-icon [name]="c.icon" slot="start" color="primary">
+          
+        </ion-icon>
+          {{c.name}}
+      </ion-item>
+    }
+</ion-list>
+
+    <!--
+    <ion-button routerLink="/alert">
+    Alert
+  </ion-button>
+   <ion-button routerLink="/action-sheet">
+    Action Sheet
+  </ion-button> 
+  -->
+</ion-content>
